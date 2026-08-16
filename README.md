@@ -24,7 +24,7 @@ This project is focused on basic data preparation and exploratory analysis:
 | Item | Value                          |
 |------|--------------------------------|
 | Project artifact | `java-data-science-algorithms` |
-| Group ID | `in.harshshende.datascience`   |
+| Group ID | `in.harshshende`   |
 | Version | `1.0-SNAPSHOT`                 |
 | Java version | `25`                           |
 | Maven compiler source | `25`                           |
@@ -46,12 +46,13 @@ The project uses the following Maven dependencies:
 src/
   main/
     java/
-      in/harshshende/datascience/
+      in/harshshende/
         Main.java
         util/
           Utils.java
           TableSummary.java
           TableSplitter.java
+          CorrelationMatrix.java
     resources/
       datasets/
         *.csv
@@ -61,15 +62,16 @@ src/
 
 ### Package responsibilities
 
-- **`in.harshshende.datascience`**
+- **`in.harshshende`**
   - Contains the application entry point in `Main.java`.
   - `Main` currently prints a simple message and serves as the starting class for the project.
 
-- **`in.harshshende.datascience.util`**
+- **`in.harshshende.util`**
   - Contains reusable helper classes for table processing.
   - `Utils` provides column-type detection helpers.
   - `TableSummary` builds a statistical summary table for a `Tablesaw` table.
   - `TableSplitter` creates train, test, and validation subsets from a `Tablesaw` table.
+  - `CorrelationMatrix` computes a correlation matrix for continuous columns, handling missing values and supporting numeric types (`INTEGER`, `LONG`, `FLOAT`, `DOUBLE`).
 
 ## Notes
 
